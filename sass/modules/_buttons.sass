@@ -1,0 +1,29 @@
+@import "mixins"
+.btn
+    display:    inline-block
+    font-weight:    $font-w-n
+    line-height:    $base-line-h
+    text-align: center
+    font-size:  $font-base
+    vertical-align: middle
+    border: $border-width solid transparent
+    transition: $btn-trans
+    border-radius:  $border-radius
+    +btn-sizing($btn-padding-y,$btn-padding-x,$font-base,$border-radius)
+
+.buy-btn-lg
+    +btn-sizing( 12px, 35px, $font-large, 30px)
+    width:  100%
+
+.buy-btn-md
+    +btn-sizing(18px,   50px    ,$font-base,    30px)
+
+.btn-dark
+    +btn-var($btn-main-color,   lighten($btn-dark-bg, 40%), $btn-border-dark)
+
+.btn-primary
+        +btn-var($btn-main-color,   lighten($btn-primary-bg, 10%), $btn-border-primary)
+
+.btn-third
+        +btn-var($btn-main-color,   lighten($btn-third-bg, 10%), $btn-border-third)
+
